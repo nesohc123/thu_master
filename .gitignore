@@ -4,3 +4,12 @@ Data
 Data/*
 intermediate
 intermediate/*
+
+# LaTeX build artifacts
+Tex/Slide.aux
+Tex/Slide.log
+Tex/Slide.nav
+Tex/Slide.out
+Tex/Slide.pdf
+Tex/Slide.snm
+Tex/Slide.toc
