@@ -1,0 +1,430 @@
+% !TEX program = xelatex
+\documentclass[10pt, aspectratio=169]{beamer}
+
+% ── 中文支持 ──
+\usepackage{ctex}
+
+% ── 主题与配色 ──
+\usetheme{Madrid}
+\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamerfont{frametitle}{size=\normalsize}
+
+% ── 常用宏包 ──
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{caption}
+\captionsetup[figure]{font=tiny,labelfont=tiny}
+\captionsetup[table]{font=tiny,labelfont=tiny}
+
+% ── 全局缩小正文字号，保持内容紧凑 ──
+\setbeamerfont{normal text}{size=\footnotesize}
+\AtBeginDocument{\usebeamerfont{normal text}}
+
+% ── 标题信息 ──
+\title{北向资金对A股市场的影响与\\基于北向资金的量化交易策略}
+\author{杨明宸}
+\institute{清华大学}
+\date{\today}
+
+% ══════════════════════════════════════════
+\begin{document}
+
+% ── Slide 1: 封面 ──
+\begin{frame}
+\titlepage
+\end{frame}
+
+% ══════════════════════════════════════════
+% Slide 2: 研究背景、文献定位与核心问题
+% ══════════════════════════════════════════
+\begin{frame}{研究背景、文献定位与核心问题}
+\begin{columns}[T]
+\begin{column}{0.52\textwidth}
+\textbf{制度背景}\ \ 沪港通（2014.11）与深港通（2016.12）开通以来，北向资金持股总市值超2.3万亿元，日均成交占A股全市场10\%--15\%。监管层将"引入成熟境外资金、促进价格发现"列为政策目标，市场默认北向资金为"聪明钱"(Smart Money)，但实证证据\textbf{有限}且结论\textbf{相互矛盾}。
+
+\vspace{0.3em}
+\textbf{现有文献四大缺陷}
+\begin{enumerate}\setlength\itemsep{0pt}
+    \item \textbf{盈利能力度量信息损失}：普遍采用标准截面IC，截面去均值操作压缩了择时收益信息，选股与择时贡献无法独立识别
+    \item \textbf{因果识别工具缺位}：波动率效应三项主要研究得出三种截然相反结论（增大/减小/无影响），根源在于缺乏外生政策冲击的准自然实验框架
+    \item \textbf{策略研究存在数据泄露与因子混淆}：持仓数据为盘后公布，已有策略将当日持仓变动与当日收益同期对齐（look-ahead bias）；且未控制动量反转因子暴露
+    \item \textbf{研究泛化能力受限}：多局限于沪深300等窄基样本
+\end{enumerate}
+\end{column}
+\begin{column}{0.46\textwidth}
+\textbf{核心问题}
+\begin{enumerate}\setlength\itemsep{0pt}
+    \item 北向资金是否是"聪明钱"？收益来源于选股还是择时？交易频率与哪类投资者更相似？
+    \item 北向资金对A股\textbf{收益率}（羊群效应）和\textbf{波动率}（系统性影响）产生了什么\textbf{因果效应}？
+    \item 能否基于北向资金信息构建独立于动量反转策略的\textbf{可交易alpha}？非线性模型能否带来增量？
+\end{enumerate}
+
+\vspace{0.3em}
+\textbf{研究框架与数据}
+
+数据：沪市A股，核心数据为CSMAR逐股日度持仓（2017.10--2025.10）+行情数据；DID分析使用2014.05--2015.05窗口。
+
+\vspace{0.2em}
+\centering
+\fbox{\scriptsize 特征刻画} $\;\xrightarrow{\text{假说}}\;$ \fbox{\scriptsize 因果识别} $\;\xrightarrow{\text{指导}}\;$ \fbox{\scriptsize 策略构建}
+
+\vspace{0.2em}
+\raggedright
+{\scriptsize 逻辑：北向资金特征（择时主导+高频交易+短期预测）$\Rightarrow$ 理论预测（羊群效应+波动率加剧）$\Rightarrow$ 利用短期信息优势构建alpha策略}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ══════════════════════════════════════════
+% Slide 3: 收益能力验证与来源分解
+% ══════════════════════════════════════════
+\begin{frame}{北向资金特征（一）：收益能力验证与来源分解}
+\begin{columns}[T]
+\begin{column}{0.52\textwidth}
+\textbf{问题}：北向资金是否为"聪明钱"？
+
+\textbf{方法}：区分\textbf{静态持仓绝对收益}（复制收盘持仓的被动组合）与\textbf{主动交易相对收益}（当日调仓创造的增量价值）。结果：绝对收益$\approx 0$，但相对收益在多费率情景下（0/2/5 bps）均\textbf{稳健正增长}（右上图）。
+
+\textbf{统计推断}：构造修正相关系数$\widetilde{Corr}_t = \sum_i X_{it}Y_{it} / (\|X\|\|Y\|)$，与传统Pearson IC不同之处在于\textbf{不做截面去均值}，从而同时捕捉选股与择时信息。以$\{\widetilde{Corr}_t\}$对常数项做HAC稳健回归：$\hat{\alpha}=0.0021$，NW $t=3.82$，$p<0.001${\color{red}\textbf{***}}。JB检验拒绝正态性（峰度4.955），验证HAC标准误的必要性。
+
+\vspace{0.3em}
+\textbf{收益来源分解}：定义TotalPnl $=\sum_t\sum_i \alpha_{it}r_{i,t+1}$，CsPnl在截面去均值后计算（仅保留选股），TsPnl = TotalPnl $-$ CsPnl。结果：选股\textbf{42\%}，择时\textbf{58\%}。北向资金超额收益\textbf{以择时为主导}，暗示其信息优势更多体现在对市场整体短期涨跌方向的把握。
+\end{column}
+\begin{column}{0.46\textwidth}
+    \centering
+    \includegraphics[width=\linewidth,height=0.33\textheight,keepaspectratio]{../Figure/北向交易相对收益.png}
+    \vspace{-0.5em}
+    {\tiny 北向资金主动交易累积相对收益（0/2/5 bps费率情景）}
+
+    \vspace{0.2em}
+    \includegraphics[width=\linewidth,height=0.33\textheight,keepaspectratio]{../Figure/收益分解.png}
+    \vspace{-0.5em}
+    {\tiny 收益来源分解——选股(CsPnl) 42\% vs 择时(TsPnl) 58\%}
+
+    \vspace{0.2em}
+    {\scriptsize \textbf{启示}：策略设计应利用北向资金的\textbf{择时}信号，预测目标应锁定\textbf{短期}回报，在\textbf{全市场}范围选股。}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ══════════════════════════════════════════
+% Slide 4: 交易模式与预测期限
+% ══════════════════════════════════════════
+\begin{frame}{北向资金特征（二）：交易模式与多期限预测能力}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{交易模式识别}
+
+A股大股东（创始人、国资、战投）持股虽计入流通市值但实际极少交易，直接比较换手率会\textbf{严重低估}全市场真实换手水平。本文构造\textbf{非对称买卖交易率}修正此偏误：利用上交所年度统计报告中机构/散户交易占比与持股占比数据，计算"相对换手倍数"$R_k = \text{交易占比}_k / \text{持股占比}_k$（机构$R\approx$0.8--1.1，散户$R\approx$3.5--4.0），对全市场换手率进行稳健调整。
+
+\textbf{结论}：即便乘以1.5倍保守上界，北向资金交易率仍\textbf{远超}内地机构；乘以4倍后与\textbf{散户}上界相当（右图）。北向资金呈现\textbf{"对冲基金式"高频交易}特征，而非传统认知中的"长线价值投资者"。
+
+    \centering
+    \vspace{0.2em}
+    \includegraphics[width=0.85\linewidth,height=0.25\textheight,keepaspectratio]{../Figure/turnover_3.png}
+    \vspace{-0.5em}
+    {\tiny 北向资金交易率 vs 散户换手率上界（4$\times$调整）}
+\end{column}
+\begin{column}{0.50\textwidth}
+\textbf{多期限预测能力检验}
+
+方法：对预测期限$n \in \{1,21,63,126,252\}$日，计算$n$阶滞后移动平均净流入与$n$阶前向移动平均回报率的截面Pearson相关系数$\rho_t^{(n)}$，HAC稳健$t$检验。
+
+\vspace{0.2em}
+\centering
+{\scriptsize
+\begin{tabular}{lccc}
+\toprule
+\textbf{预测期限} & \textbf{$\bar{\rho}^{(n)}$} & \textbf{NW $t$} & \textbf{显著性} \\
+\midrule
+1日 & 0.0021 & 3.82 & *** \\
+1月 ($n$=21) & 0.0115 & 2.16 & ** \\
+1季 ($n$=63) & 0.0188 & 2.69 & ** \\
+半年 ($n$=126) & 0.0037 & 0.53 & --- \\
+1年 ($n$=252) & $-$0.0010 & $-$0.24 & --- \\
+\bottomrule
+\end{tabular}
+}
+
+\vspace{0.3em}
+\raggedright
+\textbf{核心发现}：预测能力从日频到年频\textbf{单调递减}——日频最强（$t$=3.82），月—季度统计显著但经济意义有限，\textbf{半年及以上完全消失}（$t<1$）。信息优势高度集中于\textbf{短期价格波动}，而非长期基本面判断。
+
+\textbf{理论推测}：若北向资金仅具备短期预测力，则其高频交易可能通过信息传递和流动性冲击引发内地投资者跟风（羊群效应），形成正反馈交易循环，\textbf{系统性放大}A股短期波动率$\Rightarrow$\textbf{下一节实证检验}。
+\end{column}
+\end{columns}
+\end{frame}
+
+% ══════════════════════════════════════════
+% Slide 5: 羊群效应——VAR与脉冲响应
+% ══════════════════════════════════════════
+\begin{frame}{对A股市场的影响（一）：羊群效应——VAR模型与脉冲响应}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{研究动机}：北向资金具有远超机构的交易频率，其方向性买卖信号通过同花顺、东方财富等主流资讯平台被首页推送给A股散户投资者，客观上为羊群效应提供了高效的信息传导渠道。
+
+\textbf{数据处理}：内生变量为北向净流入总额$\widetilde{\text{Inflow}}_t$与沪港通标的股成交额总额$\widetilde{\text{Value}}_t$。原始序列因A股市值长期上升趋势存在伪回归风险，采用5日移动平均滤波器去趋势。BIC准则选定VAR(4)。
+
+\vspace{0.2em}
+\textbf{Granger因果检验}
+\begin{itemize}\setlength\itemsep{0pt}
+    \item 北向$\to$成交额：$F=15.44$，$p<0.001$ {\color{red}\textbf{***}}
+    \item 成交额$\to$北向：$F=4.204$，$p=0.002$（联合显著，但$F$值远小于反方向）
+\end{itemize}
+北向资金对市场成交额的引领效应在统计量级上\textbf{远强于}反向影响。
+
+\vspace{0.2em}
+\textbf{脉冲响应函数}（右上图）：成交额在北向净流入冲击后\textbf{约4--5个交易日}内95\%置信带下界$>$0，之后衰减至不显著。反向冲击则各阶均含零，不显著。$\Rightarrow$\textbf{持续约一周的单向羊群效应}。
+\end{column}
+\begin{column}{0.50\textwidth}
+    \centering
+    \includegraphics[width=\linewidth,height=0.48\textheight,keepaspectratio]{irf_value.png}
+    \vspace{-0.5em}
+    {\tiny VAR(4)双向脉冲响应函数（20阶，95\%置信带，5日MA去趋势）}
+
+    \vspace{0.3em}
+    \raggedright
+    \textbf{波动率VAR分析补充}：同框架检验北向资金\textbf{日度交易流量}对$\text{Vol}_1$/$\text{Vol}_2$的边际因果效应（intensive margin），格兰杰检验与IRF均\textbf{未发现}稳健的显著关系。$\Rightarrow$ 北向资金对波动率的影响并非"多买/少买"的流量效应，而可能是\textbf{"是否被允许交易"的制度性存在效应}（extensive margin），需用\textbf{DID方法}识别。
+
+    \vspace{0.2em}
+    {\scriptsize \textbf{逻辑衔接}：日度流量$\to$波动率无显著因果 $\ne$ 制度准入$\to$波动率无影响。下面以沪港通开通为准自然实验进行DID检验。}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ══════════════════════════════════════════
+% Slide 6: DID实验设计
+% ══════════════════════════════════════════
+\begin{frame}{对A股市场的影响（二）：DID实验设计——北向资金准入与波动率}
+\textbf{核心问题}：允许北向资金交易某只股票（纳入沪港通标的）这一\textbf{制度安排本身}，是否\textbf{系统性地}改变了该股票的波动率水平？
+
+\vspace{0.2em}
+\begin{columns}[T]
+\begin{column}{0.55\textwidth}
+\textbf{准自然实验}
+\begin{itemize}\setlength\itemsep{0pt}
+    \item 事件：2014年11月17日沪港通正式开通——政策时点明确且外生于个股波动率变化
+    \item 实验组：首批沪港通标的股\textbf{467只}（剔除开通后短期内经历纳入/剔出调整的股票以排除选择偏误）
+    \item 对照组：同期未被纳入沪港通的沪市A股\textbf{280只}
+    \item 窗口期：2014.05.17--2015.05.17（前后各6个月），剔除事件当日
+\end{itemize}
+
+\vspace{0.2em}
+\textbf{DID模型}
+\begin{equation*}
+    \text{Vol}_{i,t} = \alpha_i + \gamma_t + \beta_3\, D_i \times \text{post}_t + \mathbf{X}_{i,t}^{\top}\boldsymbol{\delta} + \varepsilon_{i,t}
+\end{equation*}
+
+$\alpha_i$个体FE吸收不随时间变化的公司特征（规模、行业等），$\gamma_t$时间FE吸收市场层面共同冲击（2014--15牛市），$\beta_3$为\textbf{核心DID估计量}——控制组间固有差异和共同时间趋势后，标的股在政策开通后相对于非标的股的\textit{额外}波动率变化。
+
+波动率指标：$\text{Vol}_1 = r_{i,t}^2$（日度回报率平方）及$\text{Vol}_2 = (P^{high}-P^{low})/P^{open}$（日内振幅），双指标交叉验证。
+\end{column}
+\begin{column}{0.43\textwidth}
+\textbf{识别威胁与应对}
+\begin{itemize}\setlength\itemsep{0pt}
+    \item \textbf{选择偏误}：首批标的为上证180/380成分股+A+H股，系统性偏向大市值蓝筹 $\Rightarrow$ 个体FE吸收
+    \item \textbf{时间扰动}：事件窗口内恰逢A股大牛市前半段 $\Rightarrow$ 时间FE吸收
+    \item \textbf{控制变量}：逐步加入总资产、资产负债率、流动比率、ROA、资产周转率（取事件前最近年报）+ 申万一级行业哑变量
+\end{itemize}
+
+\vspace{0.3em}
+\textbf{稳健性设计}
+
+\textbf{波动率暂时性回落假说}：开通初期境外投资者集中建仓可能暂时推高波动率，随后回落 $\Rightarrow$ 剔除事件前后各1个月数据（样本量165,058$\to$136,604），若$\hat{\beta}_3$仍显著，则波动率上升具有\textbf{持续性}，非暂时性过渡效应。
+
+\vspace{0.2em}
+{\scriptsize 共6组回归设定$\times$2种波动率指标$\times$2种时间窗口 = 24组检验。}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ══════════════════════════════════════════
+% Slide 7: DID回归结果
+% ══════════════════════════════════════════
+\begin{frame}{DID回归结果与稳健性检验}
+\centering
+\vspace{-0.3em}
+{\tiny \textbf{表1：完整样本窗口（2014.05--2015.05）}}
+
+\vspace{-0.2em}
+{\tiny
+\begin{tabular}{lcccccc}
+\toprule
+& (1) & (2) & (3) & (4) & (5) & (6) \\
+& \multicolumn{3}{c}{Panel A：$\text{Vol}_1$（回报率平方）} & \multicolumn{3}{c}{Panel B：$\text{Vol}_2$（日内振幅）} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+& 基准 & +财务 & +全部 & 基准 & +财务 & +全部 \\
+\midrule
+\textbf{Post $\times$ Exp} & \textbf{0.0040***} & \textbf{0.0039***} & \textbf{0.0039***} & \textbf{9.82e-5***} & \textbf{9.75e-5***} & \textbf{9.76e-5***} \\
+行业/个体/时间FE & 否/是/是 & 是/是/是 & 是/是/是 & 否/是/是 & 是/是/是 & 是/是/是 \\
+$N$ / $R^2$ & 165k/0.320 & 165k/0.320 & 165k/0.320 & 165k/0.136 & 165k/0.136 & 165k/0.136 \\
+\bottomrule
+\end{tabular}
+}
+
+\vspace{0.3em}
+{\tiny \textbf{表2：剔除事件临近期（排除2014.10.17--2014.12.17全部观测值）}}
+
+\vspace{-0.2em}
+{\tiny
+\begin{tabular}{lcccccc}
+\toprule
+& (1) & (2) & (3) & (4) & (5) & (6) \\
+& \multicolumn{3}{c}{Panel A：$\text{Vol}_1$} & \multicolumn{3}{c}{Panel B：$\text{Vol}_2$} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+& 基准 & +财务 & +全部 & 基准 & +财务 & +全部 \\
+\midrule
+\textbf{Post $\times$ Exp} & \textbf{0.0034***} & \textbf{0.0033***} & \textbf{0.0033***} & \textbf{6.84e-5***} & \textbf{6.53e-5***} & \textbf{6.55e-5***} \\
+$N$ / $R^2$ & 137k/0.320 & 137k/0.320 & 137k/0.320 & 137k/0.141 & 137k/0.141 & 137k/0.141 \\
+\bottomrule
+\end{tabular}
+}
+
+\vspace{0.3em}
+\raggedright
+\textbf{关键结论}：
+\begin{itemize}\setlength\itemsep{0pt}
+    \item $\hat{\beta}_3$（Post$\times$Experiment）在\textbf{全部12组设定}中均为正且在\textbf{1\%}水平下高度显著，系数值对控制变量的加入\textbf{高度不敏感}（Vol$_1$: 0.0039--0.0040），排除遗漏变量偏误
+    \item 剔除事件前后各1个月后：Vol$_1$点估计下降约15\%（0.0040$\to$0.0034），Vol$_2$下降约30\%（9.82e-5$\to$6.84e-5），\textbf{但仍1\%显著}
+    \item $\Rightarrow$ 波动率上升具有\textbf{持续性}——大部分效应\textbf{无法}归因于初始建仓的暂时性冲击
+    \item \textbf{综合羊群效应+DID}：北向资金对A股价格发现功能的促进作用有限，其高频交易行为\textbf{系统性加剧}了标的股票的短期波动
+\end{itemize}
+{\tiny 注：***、**、*分别表示1\%、5\%、10\%显著。聚类稳健标准误。747只股票。}
+\end{frame}
+
+% ══════════════════════════════════════════
+% Slide 8: 策略方法论——残差化框架与特征工程
+% ══════════════════════════════════════════
+\begin{frame}{量化策略（一）：残差化框架、特征工程与模型设计}
+\begin{columns}[T]
+\begin{column}{0.52\textwidth}
+\textbf{A股动量反转alpha不可交易的根源}
+
+A股因\textbf{卖空限制}+\textbf{涨跌停板}，动量反转策略产生大量\textbf{虚假alpha}：(1)卖空限制下，空头alpha无法交易——策略IC集中于空头端但无法实现PnL；(2)涨跌停板制造虚假短期动量（"打板效应"）——封板时无法按收盘价建仓。$\Rightarrow$ 若不控制动量反转因子暴露，策略alpha来源不可解释。
+
+\vspace{0.2em}
+\textbf{"类Barra"残差化预测目标}
+
+在每日横截面上将对数回报率$r_{i,t}$对如下风格因子做WLS回归取残差（bret）：
+\begin{itemize}\setlength\itemsep{0pt}
+    \item 价格动量因子：1日/5日/21日/252日回报率（覆盖日内反转至年度动量）
+    \item 规模因子：$\log$(流通市值)
+    \item 行业因子：证监会2012版行业哑变量（等价含截距项）
+\end{itemize}
+bret\textbf{正交于}滞后收益率线性张成空间 $\Rightarrow$ 任何仅为滞后价格线性组合的因子\textbf{不可能}对bret有线性预测力 $\Rightarrow$ 保证alpha独立于动量反转。
+
+\vspace{0.2em}
+样本权重 $w_{i,t} = \log(\text{MktCap}_{i,t})$，压缩极端权重、反映交易成本差异、匹配北向资金广覆盖交易特征。
+\end{column}
+\begin{column}{0.46\textwidth}
+\textbf{26个特征变量}（基于持仓市值+净持仓变动两个原始字段）
+
+核心运算符：63日ts-zscore标准化（消除长期趋势）、L2-norm归一化、多半衰期EMA（0.1/1/5/10日，捕捉不同频率动态）、截面GaussianRank（仅保留排序信息）。
+
+特殊处理：(1)部分特征对1日/5日/21日滞后回报率做截面回归取残差（"控制滞后回报率后的超额净变化"），提高信噪比；(2)RSI变体：$\text{EMA}(\Delta w)/\text{EMA}(|\Delta w|)\in[-1,1]$，区分"稳定持续净买入"vs"频繁方向交替"。
+
+\vspace{0.3em}
+\textbf{增量滚动Ridge回归}
+
+每日$t$基于历史全部数据估计$\hat{\beta}_t = (\mathbf{A}_t+\lambda\mathbf{I})^{-1}\mathbf{b}_t$，$\lambda$=0.01。累积矩阵$\mathbf{A}_t$、$\mathbf{b}_t$可逐日增量更新（式$\mathbf{A}_t = \mathbf{A}_{t-1} + \mathbf{X}_{t-1}^\top\mathbf{W}_{t-1}\mathbf{X}_{t-1}$），引入半衰期500日的时间衰减权重$e^{-(t-s)/\tau}$使模型更重视近期数据。
+
+\textbf{关键性质}：每日预测均基于严格的历史信息集——\textbf{全部预测均为真正的样本外}，不存在传统train/test划分中的信息泄露风险。
+\end{column}
+\end{columns}
+\end{frame}
+
+% ══════════════════════════════════════════
+% Slide 9: 策略回测结果
+% ══════════════════════════════════════════
+\begin{frame}{量化策略（二）：回测结果与信号分析}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{累积平均SP}（右上图）：从2019年末$\approx$0一路攀升至2025年初$\approx$0.73，单调上升无长期回撤。\textbf{年化超额收益14.518\%}，\textbf{年化SR=4.998}——机构级高质量alpha。
+
+\textbf{累积平均IC}（右下图）：从初期$\approx$0逐步上升至$\approx$\textbf{0.012}并趋于稳定。虽绝对值温和，但需注意：(1)预测目标bret已剔除全部滞后收益率线性成分，基准线远高于原始回报率IC；(2)日频IC=0.01量级在高换手率策略中可产生显著商业价值。
+
+\vspace{0.3em}
+\textbf{ACF分析}：alpha信号滞后1日ACF=0.454，近似指数衰减——5日0.130，20日0.044，120日0.011。拟合$\text{ACF}_k\approx e^{-k/\tau_\alpha}$，$\tau_\alpha\approx$1.27日，半衰期$\approx$\textbf{0.88个交易日}。平均持仓周期$\approx$\textbf{1个交易日}。
+
+\textbf{经济逻辑自洽性}：alpha的短暂持续性（$\sim$1日半衰期）与第3--4页揭示的北向资金高频交易特征\textbf{高度吻合}——策略捕捉的正是北向资金在短期价格波动中蕴含的时效性极强的信息窗口。
+\end{column}
+\begin{column}{0.50\textwidth}
+    \centering
+    \includegraphics[width=\linewidth,height=0.28\textheight,keepaspectratio]{../Figure/rollingWLS_SP.png}
+    \vspace{-0.5em}
+    {\tiny 累积平均SP——年化14.5\%，SR$\approx$5.0}
+
+    \vspace{0.1em}
+    \includegraphics[width=\linewidth,height=0.28\textheight,keepaspectratio]{../Figure/rollingWLS_IC.png}
+    \vspace{-0.5em}
+    {\tiny 累积平均IC——稳定收敛至$\approx$0.012}
+
+    \vspace{0.1em}
+    \includegraphics[width=\linewidth,height=0.28\textheight,keepaspectratio]{../Figure/ACF.png}
+    \vspace{-0.5em}
+    {\tiny alpha信号ACF——半衰期$\approx$0.88交易日}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ══════════════════════════════════════════
+% Slide 10: 非线性模型与总结
+% ══════════════════════════════════════════
+\begin{frame}{非线性模型对比与研究总结}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{非线性模型测试}
+
+引入LightGBM（leaf-wise非对称树，高拟合容量）与CatBoost（oblivious对称树+有序提升，强正则化），在统一框架下与线性模型对比。训练集2018.09--2022.12，验证集2023.01--06（调参+早停），测试集2023.06--2024.06。
+
+\vspace{0.2em}
+\textbf{结果}（右图）：样本内IC \textbf{显著优于}线性基准（反映更高的模型容量），但样本外IC增益\textbf{几乎为零}——两类非线性模型与线性基准高度重叠。
+
+\textbf{过拟合原因分析}：
+\begin{itemize}\setlength\itemsep{0pt}
+    \item \textbf{信噪比极低}：bret剔除全部线性可解释成分后，线性IC仅$\approx$0.012，剩余方差绝大部分为不可预测噪声
+    \item \textbf{特征共线性}：26个特征均基于2个原始字段派生，不同半衰期EMA之间高度相关，树模型分裂点选择不稳定
+    \item \textbf{有效样本不足}：时序自相关导致有效独立样本$\ll$名义样本量，模型参数空间相对"欠约束"
+\end{itemize}
+
+    \centering
+    \vspace{0.1em}
+    \includegraphics[width=0.85\linewidth,height=0.20\textheight,keepaspectratio]{../Figure/non-linear-outofsample.png}
+    \vspace{-0.5em}
+    {\tiny 样本外IC：非线性模型无显著增益}
+\end{column}
+\begin{column}{0.50\textwidth}
+\textbf{七大核心发现}
+\begin{enumerate}\setlength\itemsep{0pt}
+    \item[\ding{172}] 北向资金通过主动交易获得\textbf{显著超额收益}（$\hat\alpha$=0.0021, $t$=3.82, HAC稳健）
+    \item[\ding{173}] 收益以\textbf{择时为主}（58\% vs 选股42\%），而非长期基本面判断
+    \item[\ding{174}] 交易频率远超机构投资者、与散户相当，呈\textbf{"对冲基金式"高频}特征
+    \item[\ding{175}] 预测力从日频到年频\textbf{单调递减}，半年以上完全消失
+    \item[\ding{176}] Granger因果+IRF证实\textbf{约一周的羊群效应}（$F$=15.44）
+    \item[\ding{177}] DID（12组设定$\times$2窗口）证实标的股波动率\textbf{系统性上升}，具持续性
+    \item[\ding{178}] 残差化框架下策略alpha与动量反转\textbf{统计正交}，\textbf{SR$\approx$5.0}
+\end{enumerate}
+
+\vspace{0.1em}
+\fcolorbox{red!70!black}{red!5}{%
+\parbox{0.96\linewidth}{\centering\scriptsize
+\textbf{"双刃剑"效应}：北向资金蕴含可挖掘的\textbf{短期alpha}（年化14.5\%，SR$\approx$5.0），\\
+但其高频交易行为通过羊群效应\textbf{系统性加剧}A股短期波动，\\
+对价格发现功能的促进作用\textbf{有限}——\\
+对监管机构制定资本市场双向开放的宏观审慎政策具有直接参考价值。
+}}
+
+\vspace{0.15em}
+{\scriptsize \textbf{未来方向}：引入异质性数据源（日内交易分布、港股联动指标等）；采用GAM等中间形式模型探索非线性alpha；精细化交易成本评估。}
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}
