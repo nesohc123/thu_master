@@ -1,0 +1,1022 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{10.1111/j.2517-6161.1975.tb01532.x}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2a27d828567c4f6e0f6605d2e3a2c346}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dadb59a456a7aba16cbdda197c23cca7}{%
+           family={Durbin},
+           familyi={D\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7aa9e90febc1c245096e5b500454ac70}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{06f5f3c23064cc3604df3a456545276a}
+      \strng{fullhash}{06f5f3c23064cc3604df3a456545276a}
+      \strng{fullhashraw}{06f5f3c23064cc3604df3a456545276a}
+      \strng{bibnamehash}{06f5f3c23064cc3604df3a456545276a}
+      \strng{authorbibnamehash}{06f5f3c23064cc3604df3a456545276a}
+      \strng{authornamehash}{06f5f3c23064cc3604df3a456545276a}
+      \strng{authorfullhash}{06f5f3c23064cc3604df3a456545276a}
+      \strng{authorfullhashraw}{06f5f3c23064cc3604df3a456545276a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Methods for studying the stability over time of regression relationships are considered. Recursive residuals, defined to be uncorrelated with zero means and constant variance, are introduced and tests based on the cusum and cusum of squares of recursive residuals are developed. Further techniques based on moving regressions, in which the regression model is fitted from a segment of data which is moved along the series, and on regression models whose coefficients are polynomials in time are studied. The Quandt log-likelihood ratio statistic is considered. Emphasis is placed on the use of graphical methods. The techniques proposed have been embodied in a comprehensive computer program, timvar. Use of the techniques is illustrated by applying them to three sets of data.}}
+      \field{issn}{0035-9246}
+      \field{journaltitle}{Journal of the Royal Statistical Society: Series B (Methodological)}
+      \field{month}{12}
+      \field{number}{2}
+      \field{title}{{Techniques for Testing the Constancy of Regression Relationships Over Time}}
+      \field{volume}{37}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{149\bibrangedash 163}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1111/j.2517-6161.1975.tb01532.x
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/jrsssb/article-pdf/37/2/149/49096325/jrsssb\_37\_2\_149.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1111/j.2517-6161.1975.tb01532.x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1111/j.2517-6161.1975.tb01532.x
+      \endverb
+    \endentry
+    \entry{CHAKRABARTI20021}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c3c1550860614240cf8ca88cda688a59}{%
+           family={Chakrabarti},
+           familyi={C\bibinitperiod},
+           given={Rajesh},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=751bfa7d3d8bacf865d8d98f5afe222b}{%
+           family={Roll},
+           familyi={R\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{e708dbce3c9acbf051bcbfc746bcf3ad}
+      \strng{fullhash}{e708dbce3c9acbf051bcbfc746bcf3ad}
+      \strng{fullhashraw}{e708dbce3c9acbf051bcbfc746bcf3ad}
+      \strng{bibnamehash}{e708dbce3c9acbf051bcbfc746bcf3ad}
+      \strng{authorbibnamehash}{e708dbce3c9acbf051bcbfc746bcf3ad}
+      \strng{authornamehash}{e708dbce3c9acbf051bcbfc746bcf3ad}
+      \strng{authorfullhash}{e708dbce3c9acbf051bcbfc746bcf3ad}
+      \strng{authorfullhashraw}{e708dbce3c9acbf051bcbfc746bcf3ad}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Asian stock markets are compared with European markets before and during the 1997 Asian crisis. The clinical issue is whether regional inter-dependence became larger around the crisis, fomenting investor fears of contagion and reducing asset values because of lower diversification potential. Statistical measures are developed to aid in this inquiry. We find that European and East Asian countries were not susceptible to volatility contagion in the pre-crisis era but that susceptibility increased significantly with the onset of the crisis. Covariances, correlations, and volatilities increased from the pre-crisis to the crisis period in both regions, but the percentage increases were much larger in Asia. Diversification potential was better in Asia than in Europe before the crisis; this was reversed during the crisis. The observed decline in diversification potency in Asia is reason enough for large declines in asset values though one cannot prove, of course, that it was the cause rather than the effect of the crisis. Exchange rate volatility played a major role.}
+      \field{issn}{1386-4181}
+      \field{journaltitle}{Journal of Financial Markets}
+      \field{number}{1}
+      \field{title}{East Asia and Europe during the 1997 Asian collapse: a clinical study of a financial crisis}
+      \field{volume}{5}
+      \field{year}{2002}
+      \field{pages}{1\bibrangedash 30}
+      \range{pages}{30}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S1386-4181(01)00022-2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1386418101000222
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1386418101000222
+      \endverb
+    \endentry
+    \entry{doi:10.1080/23322039.2020.1754321}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cb6f16f850525d1433a08dd513414188}{%
+           family={Chhimwal},
+           familyi={C\bibinitperiod},
+           given={Bhaskar},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8abeea91401aa7cc682a105bcb696ab}{%
+           family={Bapat},
+           familyi={B\bibinitperiod},
+           given={Varadraj},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d418bfb155eeae081da8310e6352ac21}{%
+           family={McMillan},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Cogent OA}%
+      }
+      \strng{namehash}{28d620fb17d704cf6711f5bc44befa52}
+      \strng{fullhash}{28d620fb17d704cf6711f5bc44befa52}
+      \strng{fullhashraw}{28d620fb17d704cf6711f5bc44befa52}
+      \strng{bibnamehash}{28d620fb17d704cf6711f5bc44befa52}
+      \strng{authorbibnamehash}{28d620fb17d704cf6711f5bc44befa52}
+      \strng{authornamehash}{28d620fb17d704cf6711f5bc44befa52}
+      \strng{authorfullhash}{28d620fb17d704cf6711f5bc44befa52}
+      \strng{authorfullhashraw}{28d620fb17d704cf6711f5bc44befa52}
+      \strng{editorbibnamehash}{d418bfb155eeae081da8310e6352ac21}
+      \strng{editornamehash}{d418bfb155eeae081da8310e6352ac21}
+      \strng{editorfullhash}{d418bfb155eeae081da8310e6352ac21}
+      \strng{editorfullhashraw}{d418bfb155eeae081da8310e6352ac21}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cogent Economics \& Finance}
+      \field{number}{1}
+      \field{title}{Impact of foreign and domestic investment in stock market volatility: Empirical evidence from India}
+      \field{volume}{8}
+      \field{year}{2020}
+      \field{pages}{1754321}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1080/23322039.2020.1754321
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1080/23322039.2020.1754321
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/23322039.2020.1754321
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/23322039.2020.1754321
+      \endverb
+    \endentry
+    \entry{CHOE1999227}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6cd8c381386634dee2ff24cfa9bfb0ef}{%
+           family={Choe},
+           familyi={C\bibinitperiod},
+           given={Hyuk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=42334140ad42c6e46b7486cf4fc0d322}{%
+           family={Kho},
+           familyi={K\bibinitperiod},
+           given={Bong-Chan},
+           giveni={B\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7fc218f05a3550a77ae11d02addb8e94}{%
+           family={Stulz},
+           familyi={S\bibinitperiod},
+           given={René\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{6e0a62e92bd8999d1eda68b21dc8378d}
+      \strng{fullhash}{6e0a62e92bd8999d1eda68b21dc8378d}
+      \strng{fullhashraw}{6e0a62e92bd8999d1eda68b21dc8378d}
+      \strng{bibnamehash}{6e0a62e92bd8999d1eda68b21dc8378d}
+      \strng{authorbibnamehash}{6e0a62e92bd8999d1eda68b21dc8378d}
+      \strng{authornamehash}{6e0a62e92bd8999d1eda68b21dc8378d}
+      \strng{authorfullhash}{6e0a62e92bd8999d1eda68b21dc8378d}
+      \strng{authorfullhashraw}{6e0a62e92bd8999d1eda68b21dc8378d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper examines the impact of foreign investors on stock returns in Korea from November 30, 1996 to the end of 1997 using order and trade data. We find strong evidence of positive feedback trading and herding by foreign investors before the period of Korea's economic crisis. During the crisis period, herding falls, and positive feedback trading by foreign investors mostly disappears. We find no evidence that trades by foreign investors had a destabilizing effect on Korea's stock market over our sample period. In particular, the market adjusted quickly and efficiently to large sales by foreign investors, and these sales were not followed by negative abnormal returns.}
+      \field{issn}{0304-405X}
+      \field{journaltitle}{Journal of Financial Economics}
+      \field{number}{2}
+      \field{title}{Do foreign investors destabilize stock markets? The Korean experience in 1997}
+      \field{volume}{54}
+      \field{year}{1999}
+      \field{pages}{227\bibrangedash 264}
+      \range{pages}{38}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0304-405X(99)00037-9
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304405X99000379
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304405X99000379
+      \endverb
+      \keyw{Foreign investors,Positive feedback trading,Herding,East Asian crisis}
+    \endentry
+    \entry{DUFOUR198231}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b5260db6e92c23b3813282a0c7e76b8a}{%
+           family={Dufour},
+           familyi={D\bibinitperiod},
+           given={Jean-Marie},
+           giveni={J\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{b5260db6e92c23b3813282a0c7e76b8a}
+      \strng{fullhash}{b5260db6e92c23b3813282a0c7e76b8a}
+      \strng{fullhashraw}{b5260db6e92c23b3813282a0c7e76b8a}
+      \strng{bibnamehash}{b5260db6e92c23b3813282a0c7e76b8a}
+      \strng{authorbibnamehash}{b5260db6e92c23b3813282a0c7e76b8a}
+      \strng{authornamehash}{b5260db6e92c23b3813282a0c7e76b8a}
+      \strng{authorfullhash}{b5260db6e92c23b3813282a0c7e76b8a}
+      \strng{authorfullhashraw}{b5260db6e92c23b3813282a0c7e76b8a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{Recursive stability analysis of linear regression relationships: An exploratory methodology}
+      \field{volume}{19}
+      \field{year}{1982}
+      \true{nocite}
+      \field{pages}{31\bibrangedash 76}
+      \range{pages}{46}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0304-4076(82)90050-1
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0304407682900501
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0304407682900501
+      \endverb
+    \endentry
+    \entry{KIM200277}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=202b66c25340938217c99aa712916848}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Woochan},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df9b412d2c1af54f77ba4680babc92fc}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Shang-Jin},
+           giveni={S\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{ee36e6157e708852d33f2b8a063ac4dd}
+      \strng{fullhash}{ee36e6157e708852d33f2b8a063ac4dd}
+      \strng{fullhashraw}{ee36e6157e708852d33f2b8a063ac4dd}
+      \strng{bibnamehash}{ee36e6157e708852d33f2b8a063ac4dd}
+      \strng{authorbibnamehash}{ee36e6157e708852d33f2b8a063ac4dd}
+      \strng{authornamehash}{ee36e6157e708852d33f2b8a063ac4dd}
+      \strng{authorfullhash}{ee36e6157e708852d33f2b8a063ac4dd}
+      \strng{authorfullhashraw}{ee36e6157e708852d33f2b8a063ac4dd}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Using a unique data set, we study the trading behavior of foreign portfolio investors in Korea before and during the currency crisis. The central message is that investors in different categories have different trading patterns. For example, foreign investors outside Korea are more likely to engage in positive feedback trading strategies and are more likely to engage in herding than the branches/subsidiaries of foreign institutions in Korea or foreign individuals living in Korea. This difference in trading behavior is possibly related to the difference in their information. This paper suggests that it may be worth exploring policies that can encourage foreign investors to acquire more information (e.g. by setting up a branch or a subsidiary in the emerging country).}
+      \field{issn}{0022-1996}
+      \field{journaltitle}{Journal of International Economics}
+      \field{number}{1}
+      \field{title}{Foreign portfolio investors before and during a crisis}
+      \field{volume}{56}
+      \field{year}{2002}
+      \field{pages}{77\bibrangedash 96}
+      \range{pages}{20}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0022-1996(01)00109-X
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S002219960100109X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S002219960100109X
+      \endverb
+      \keyw{Foreign portfolio investment,Crisis,Feedback trading,Herding}
+    \endentry
+    \entry{RePEc:bin:bpeajo:v:29:y:1998:i:1998-2:p:137-206}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1dc32e0388d1f3dd99440cc8a5c3333b}{%
+           family={Krugman},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{1dc32e0388d1f3dd99440cc8a5c3333b}
+      \strng{fullhash}{1dc32e0388d1f3dd99440cc8a5c3333b}
+      \strng{fullhashraw}{1dc32e0388d1f3dd99440cc8a5c3333b}
+      \strng{bibnamehash}{1dc32e0388d1f3dd99440cc8a5c3333b}
+      \strng{authorbibnamehash}{1dc32e0388d1f3dd99440cc8a5c3333b}
+      \strng{authornamehash}{1dc32e0388d1f3dd99440cc8a5c3333b}
+      \strng{authorfullhash}{1dc32e0388d1f3dd99440cc8a5c3333b}
+      \strng{authorfullhashraw}{1dc32e0388d1f3dd99440cc8a5c3333b}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brookings Papers on Economic Activity}
+      \field{number}{2}
+      \field{title}{It's Baaack: Japan's Slump and the Return of the Liquidity Trap}
+      \field{volume}{29}
+      \field{year}{1998}
+      \field{pages}{137\bibrangedash 206}
+      \range{pages}{70}
+      \verb{urlraw}
+      \verb https://EconPapers.repec.org/RePEc:bin:bpeajo:v:29:y:1998:i:1998-2:p:137-206
+      \endverb
+      \verb{url}
+      \verb https://EconPapers.repec.org/RePEc:bin:bpeajo:v:29:y:1998:i:1998-2:p:137-206
+      \endverb
+      \keyw{macroeconomics; Japan; Slump; Liquidity Trap; monetary policy}
+    \endentry
+    \entry{RePEc:eee:finlet:v:56:y:2023:i:c:s1544612323005470}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c3c72b33338b8ef6c1fca8b2abc557ac}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jia},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28da48a70b848582e327ef6f227873f0}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Pengju},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d936c385878d218bb385a66b69d4945}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Chunyan},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{9cf0f60705e0c3ef2988c76cae822848}
+      \strng{fullhash}{9cf0f60705e0c3ef2988c76cae822848}
+      \strng{fullhashraw}{9cf0f60705e0c3ef2988c76cae822848}
+      \strng{bibnamehash}{9cf0f60705e0c3ef2988c76cae822848}
+      \strng{authorbibnamehash}{9cf0f60705e0c3ef2988c76cae822848}
+      \strng{authornamehash}{9cf0f60705e0c3ef2988c76cae822848}
+      \strng{authorfullhash}{9cf0f60705e0c3ef2988c76cae822848}
+      \strng{authorfullhashraw}{9cf0f60705e0c3ef2988c76cae822848}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As a large emerging capital market, China is gradually improving its trading systems. This study examines the causal effects of China's securities margin trading policy and finds that rule improvements significantly inhibit institutional buying and selling herding behaviour. This policy inhibits the behaviour of institutional herding that does not sufficiently assess fundamentals of listed companies or pay sufficient attention to market information. Influenced herd behaviour is not consistent the pursuit of value but are irrational characteristics. The policy effects are differentiated and effective. This study also provides a reference for other emerging capital markets to improve their systems.}
+      \field{journaltitle}{Finance Research Letters}
+      \field{number}{C}
+      \field{title}{{Rule improvements and irrational characteristics of herd behaviour–The effects of SMT policy}}
+      \field{volume}{56}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1016/j.frl.2023.104175
+      \endverb
+      \verb{urlraw}
+      \verb https://ideas.repec.org/a/eee/finlet/v56y2023ics1544612323005470.html
+      \endverb
+      \verb{url}
+      \verb https://ideas.repec.org/a/eee/finlet/v56y2023ics1544612323005470.html
+      \endverb
+      \keyw{Herding behaviour; Rule improvements; Institutional investors; Shareholding motives; Information asy}
+    \endentry
+    \entry{10.1111/j.2517-6161.1966.tb00663.x}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=854df866319929995d7059ab0f72d588}{%
+           family={Ruben},
+           familyi={R\bibinitperiod},
+           given={Harold},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{854df866319929995d7059ab0f72d588}
+      \strng{fullhash}{854df866319929995d7059ab0f72d588}
+      \strng{fullhashraw}{854df866319929995d7059ab0f72d588}
+      \strng{bibnamehash}{854df866319929995d7059ab0f72d588}
+      \strng{authorbibnamehash}{854df866319929995d7059ab0f72d588}
+      \strng{authornamehash}{854df866319929995d7059ab0f72d588}
+      \strng{authorfullhash}{854df866319929995d7059ab0f72d588}
+      \strng{authorfullhashraw}{854df866319929995d7059ab0f72d588}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{A simple approximate normalization for the correlation coefficient in normal samples is obtained which is shown to compare favourably with previous normalization approximations (the usual large-sample normalization, Fisher's hyperbolic tangent transformation and Hotelling's improvement of that transformation). A second approximation, based on F and valid for large n | ρ | (n = sample size, ρ = population correlation), is also obtained. The results follow from a representation of the correlation in normal samples as the ratio of a linear combination of a standardized normal deviate and a Xn-1 to a Xn-2, where the three latter variates are independent.}}
+      \field{issn}{0035-9246}
+      \field{journaltitle}{Journal of the Royal Statistical Society: Series B (Methodological)}
+      \field{month}{12}
+      \field{number}{3}
+      \field{title}{{Some New Results on the Distribution of the Sample Correlation Coefficient}}
+      \field{volume}{28}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{513\bibrangedash 525}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1111/j.2517-6161.1966.tb00663.x
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/jrsssb/article-pdf/28/3/513/49094787/jrsssb\_28\_3\_513.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1111/j.2517-6161.1966.tb00663.x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1111/j.2517-6161.1966.tb00663.x
+      \endverb
+    \endentry
+    \entry{ctx3501173690004886}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cb57f4b2aeede8f5865afde7b8453d40}{%
+           family={Stiglitz},
+           familyi={S\bibinitperiod},
+           given={Joseph\bibnamedelima E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{location}{1}{%
+        {Nashville, TN :}%
+      }
+      \list{publisher}{1}{%
+        {American Economic Association,}%
+      }
+      \strng{namehash}{cb57f4b2aeede8f5865afde7b8453d40}
+      \strng{fullhash}{cb57f4b2aeede8f5865afde7b8453d40}
+      \strng{fullhashraw}{cb57f4b2aeede8f5865afde7b8453d40}
+      \strng{bibnamehash}{cb57f4b2aeede8f5865afde7b8453d40}
+      \strng{authorbibnamehash}{cb57f4b2aeede8f5865afde7b8453d40}
+      \strng{authornamehash}{cb57f4b2aeede8f5865afde7b8453d40}
+      \strng{authorfullhash}{cb57f4b2aeede8f5865afde7b8453d40}
+      \strng{authorfullhashraw}{cb57f4b2aeede8f5865afde7b8453d40}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0895-3309}
+      \field{journaltitle}{The journal of economic perspectives.}
+      \field{number}{2}
+      \field{title}{The private uses of public interests: incentives and institutions.(Distinguished Lecture on Economics in Government)}
+      \field{volume}{12}
+      \field{year}{1998}
+    \endentry
+    \entry{doi:10.1080/1540496X.2015.1011531}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fc630e1a55e53c31f6f56d5db87545b2}{%
+           family={Syed\bibnamedelimb Faiq\bibnamedelima Najeeb},
+           familyi={S\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Obiyathulla\bibnamedelima Bacha},
+           giveni={O\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8caf2904c688ead59ee3a0123da1ff0}{%
+           family={Masih},
+           familyi={M\bibinitperiod},
+           given={Mansur},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{fb43c8313270855999401f110f151a0b}
+      \strng{fullhash}{fb43c8313270855999401f110f151a0b}
+      \strng{fullhashraw}{fb43c8313270855999401f110f151a0b}
+      \strng{bibnamehash}{fb43c8313270855999401f110f151a0b}
+      \strng{authorbibnamehash}{fb43c8313270855999401f110f151a0b}
+      \strng{authornamehash}{fb43c8313270855999401f110f151a0b}
+      \strng{authorfullhash}{fb43c8313270855999401f110f151a0b}
+      \strng{authorfullhashraw}{fb43c8313270855999401f110f151a0b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Emerging Markets Finance and Trade}
+      \field{number}{1}
+      \field{title}{Does Heterogeneity in Investment Horizons Affect Portfolio Diversification? Some Insights Using M-GARCH-DCC and Wavelet Correlation Analysis}
+      \field{volume}{51}
+      \field{year}{2015}
+      \field{pages}{188\bibrangedash 208}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1080/1540496X.2015.1011531
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1080/1540496X.2015.1011531
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/1540496X.2015.1011531
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/1540496X.2015.1011531
+      \endverb
+    \endentry
+    \entry{TODEA201334}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b881d15e67d48433b837c08a3de966a5}{%
+           family={Todea},
+           familyi={T\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2f5e57ab9375689e5b4b2da4d6e363b}{%
+           family={Pleşoianu},
+           familyi={P\bibinitperiod},
+           given={Anita},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{5b0d766f2decc6b6e541461cf9728501}
+      \strng{fullhash}{5b0d766f2decc6b6e541461cf9728501}
+      \strng{fullhashraw}{5b0d766f2decc6b6e541461cf9728501}
+      \strng{bibnamehash}{5b0d766f2decc6b6e541461cf9728501}
+      \strng{authorbibnamehash}{5b0d766f2decc6b6e541461cf9728501}
+      \strng{authornamehash}{5b0d766f2decc6b6e541461cf9728501}
+      \strng{authorfullhash}{5b0d766f2decc6b6e541461cf9728501}
+      \strng{authorfullhashraw}{5b0d766f2decc6b6e541461cf9728501}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents empirical evidence suggesting that foreign portfolio investment had a positive and significant influence on the informational efficiency of eleven Central and Eastern European stock markets during the period 1999–2010, regardless of the type of dependence – short or long run – taken into account when determining the measure of the degree of informational efficiency. Furthermore, considering the asymmetric effects of the portfolio flows, we have generally found a direct and strong relation between the net positive flows and the degree of informational efficiency. Our panel results also show that market capitalization represents a significant explanatory factor for the presence of short run dependence, while liquidity is associated with the presence of long run dependence. After isolating the common shocks in time, market volatility seems to have an even greater impact on efficiency.}
+      \field{issn}{0264-9993}
+      \field{journaltitle}{Economic Modelling}
+      \field{title}{The influence of foreign portfolio investment on informational efficiency: Empirical evidence from Central and Eastern European stock markets}
+      \field{volume}{33}
+      \field{year}{2013}
+      \field{pages}{34\bibrangedash 41}
+      \range{pages}{8}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.econmod.2013.03.017
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0264999313001211
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0264999313001211
+      \endverb
+      \keyw{Stock market efficiency,Generalized spectral test,Generalized Hurst exponent test,Foreign portfolio investment,Central and Eastern Europe}
+    \endentry
+    \entry{经管实证}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c0641a0f9683a357d34534420e1c2508}{%
+           family={尹一凡},
+           familyi={尹\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {中文}%
+      }
+      \strng{namehash}{c0641a0f9683a357d34534420e1c2508}
+      \strng{fullhash}{c0641a0f9683a357d34534420e1c2508}
+      \strng{fullhashraw}{c0641a0f9683a357d34534420e1c2508}
+      \strng{bibnamehash}{c0641a0f9683a357d34534420e1c2508}
+      \strng{authorbibnamehash}{c0641a0f9683a357d34534420e1c2508}
+      \strng{authornamehash}{c0641a0f9683a357d34534420e1c2508}
+      \strng{authorfullhash}{c0641a0f9683a357d34534420e1c2508}
+      \strng{authorfullhashraw}{c0641a0f9683a357d34534420e1c2508}
+      \field{sortinit}{尹}
+      \field{sortinithash}{28f74e8d7d434351f443cb4ef667a34b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{清华大学学位论文}
+      \field{title}{北向资金动量交易研究}
+      \field{year}{2024}
+    \endentry
+    \entry{123}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7e6e2e7456ba537387c3b1cb51eb1e85}{%
+           family={张红鹏},
+           familyi={张\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {中文}%
+      }
+      \strng{namehash}{7e6e2e7456ba537387c3b1cb51eb1e85}
+      \strng{fullhash}{7e6e2e7456ba537387c3b1cb51eb1e85}
+      \strng{fullhashraw}{7e6e2e7456ba537387c3b1cb51eb1e85}
+      \strng{bibnamehash}{7e6e2e7456ba537387c3b1cb51eb1e85}
+      \strng{authorbibnamehash}{7e6e2e7456ba537387c3b1cb51eb1e85}
+      \strng{authornamehash}{7e6e2e7456ba537387c3b1cb51eb1e85}
+      \strng{authorfullhash}{7e6e2e7456ba537387c3b1cb51eb1e85}
+      \strng{authorfullhashraw}{7e6e2e7456ba537387c3b1cb51eb1e85}
+      \field{sortinit}{张}
+      \field{sortinithash}{5224dd6ea8d67d595848333a2165db73}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{北向资金流动对A股市场的影响研究}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.27461/d.cnki.gzjdx.2022.000372
+      \endverb
+      \verb{urlraw}
+      \verb https://link.cnki.net/doi/10.27461/d.cnki.gzjdx.2022.000372
+      \endverb
+      \verb{url}
+      \verb https://link.cnki.net/doi/10.27461/d.cnki.gzjdx.2022.000372
+      \endverb
+      \keyw{北向资金;陆港通;沪深300;VAR;GARCH}
+    \endentry
+    \entry{JTJJ202212008}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=36ee20e8cbfa6253d881fded9e99e1b8}{%
+           family={李沁洋},
+           familyi={李\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=4947aa438630ead1da15d827721672c0}{%
+           family={陈婷},
+           familyi={陈\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {中文}%
+      }
+      \strng{namehash}{02fb975192b5daddb4679a0ce943c7ee}
+      \strng{fullhash}{02fb975192b5daddb4679a0ce943c7ee}
+      \strng{fullhashraw}{02fb975192b5daddb4679a0ce943c7ee}
+      \strng{bibnamehash}{02fb975192b5daddb4679a0ce943c7ee}
+      \strng{authorbibnamehash}{02fb975192b5daddb4679a0ce943c7ee}
+      \strng{authornamehash}{02fb975192b5daddb4679a0ce943c7ee}
+      \strng{authorfullhash}{02fb975192b5daddb4679a0ce943c7ee}
+      \strng{authorfullhashraw}{02fb975192b5daddb4679a0ce943c7ee}
+      \field{sortinit}{李}
+      \field{sortinithash}{87a9fd4641bb616da89b0f1e084fa281}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1006-169X}
+      \field{journaltitle}{金融与经济}
+      \field{number}{12}
+      \field{title}{资本市场开放、分析师关注与股票流动性——基于沪深港通机制的准自然实验}
+      \field{year}{2022}
+      \field{pages}{77\bibrangedash 87}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.19622/j.cnki.cn36-1005/f.2022.12.008
+      \endverb
+    \endentry
+    \entry{STYS20231207004}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c706b6692c5a66693b54f790ef3cc2ec}{%
+           family={李洋},
+           familyi={李\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=e1e7a69c4b903b580b95bdf3deab6aac}{%
+           family={熊熊},
+           familyi={熊\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=7581212b3dd0eccd2ef17a401f027769}{%
+           family={孟永强},
+           familyi={孟\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {中文}%
+      }
+      \strng{namehash}{ba323a215cc93a7d9c0f16bfd0bcdc4f}
+      \strng{fullhash}{ba323a215cc93a7d9c0f16bfd0bcdc4f}
+      \strng{fullhashraw}{ba323a215cc93a7d9c0f16bfd0bcdc4f}
+      \strng{bibnamehash}{ba323a215cc93a7d9c0f16bfd0bcdc4f}
+      \strng{authorbibnamehash}{ba323a215cc93a7d9c0f16bfd0bcdc4f}
+      \strng{authornamehash}{ba323a215cc93a7d9c0f16bfd0bcdc4f}
+      \strng{authorfullhash}{ba323a215cc93a7d9c0f16bfd0bcdc4f}
+      \strng{authorfullhashraw}{ba323a215cc93a7d9c0f16bfd0bcdc4f}
+      \field{sortinit}{李}
+      \field{sortinithash}{87a9fd4641bb616da89b0f1e084fa281}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1000-0577}
+      \field{journaltitle}{系统科学与数学}
+      \field{title}{资本市场开放与Knight不确定性——基于北向资金交易行为的实证分析}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 15}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.12341/jssms23609
+      \endverb
+    \endentry
+    \entry{ZYCY202303004}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0901ec6320588681fa9014d6357e6aca}{%
+           family={沈红波},
+           familyi={沈\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=15eab4f3b6b46ec6c1dcfa5da4c2a223}{%
+           family={董立起},
+           familyi={董\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=6977923ead2124625407c7a619de3292}{%
+           family={陈鹏翔},
+           familyi={陈\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {中文}%
+      }
+      \strng{namehash}{514b834713e7f3200ca168e86762bd27}
+      \strng{fullhash}{514b834713e7f3200ca168e86762bd27}
+      \strng{fullhashraw}{514b834713e7f3200ca168e86762bd27}
+      \strng{bibnamehash}{514b834713e7f3200ca168e86762bd27}
+      \strng{authorbibnamehash}{514b834713e7f3200ca168e86762bd27}
+      \strng{authornamehash}{514b834713e7f3200ca168e86762bd27}
+      \strng{authorfullhash}{514b834713e7f3200ca168e86762bd27}
+      \strng{authorfullhashraw}{514b834713e7f3200ca168e86762bd27}
+      \field{sortinit}{沈}
+      \field{sortinithash}{e485ef0e02ba7a4900996ddc714bed7b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1000-1549}
+      \field{journaltitle}{中央财经大学学报}
+      \field{number}{03}
+      \field{title}{资本市场开放下基金持股的盈余质量——来自沪深港通的实证检验}
+      \field{year}{2023}
+      \field{pages}{43\bibrangedash 55}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.19681/j.cnki.jcufe.2023.03.005
+      \endverb
+    \endentry
+    \entry{1021514008.nh}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee7e658c92533826f086722788c12749}{%
+           family={罗志新},
+           familyi={罗\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {暨南大学}%
+      }
+      \strng{namehash}{ee7e658c92533826f086722788c12749}
+      \strng{fullhash}{ee7e658c92533826f086722788c12749}
+      \strng{fullhashraw}{ee7e658c92533826f086722788c12749}
+      \strng{bibnamehash}{ee7e658c92533826f086722788c12749}
+      \strng{authorbibnamehash}{ee7e658c92533826f086722788c12749}
+      \strng{authornamehash}{ee7e658c92533826f086722788c12749}
+      \strng{authorfullhash}{ee7e658c92533826f086722788c12749}
+      \strng{authorfullhashraw}{ee7e658c92533826f086722788c12749}
+      \field{sortinit}{罗}
+      \field{sortinithash}{4e12d1e47e5aaef74cd27ce7b14f9abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{沪股通及深股通资金流动对超额收益及波动率的影响研究}
+      \field{type}{mathesis}
+      \field{year}{2020}
+    \endentry
+    \entry{JKJS201710022}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fca9a855260a279113b5ae0e79b5664c}{%
+           family={胡伟},
+           familyi={胡\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=9c88568aaaea722eddcd6cdf08d7012c}{%
+           family={李豪},
+           familyi={李\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb366df6a8450d3d681b2e81ae43a265}
+      \strng{fullhash}{eb366df6a8450d3d681b2e81ae43a265}
+      \strng{fullhashraw}{eb366df6a8450d3d681b2e81ae43a265}
+      \strng{bibnamehash}{eb366df6a8450d3d681b2e81ae43a265}
+      \strng{authorbibnamehash}{eb366df6a8450d3d681b2e81ae43a265}
+      \strng{authornamehash}{eb366df6a8450d3d681b2e81ae43a265}
+      \strng{authorfullhash}{eb366df6a8450d3d681b2e81ae43a265}
+      \strng{authorfullhashraw}{eb366df6a8450d3d681b2e81ae43a265}
+      \field{sortinit}{胡}
+      \field{sortinithash}{80b1f3d8630f0eff32e77d1d185df759}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1009-6345}
+      \field{journaltitle}{中国注册会计师}
+      \field{number}{10}
+      \field{title}{“深港通”的实施对我国股票市场的短期影响分析}
+      \field{year}{2017}
+      \field{pages}{43\bibrangedash 47}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.16292/j.cnki.issn1009-6345.2017.10.009
+      \endverb
+    \endentry
+    \entry{JRQH202109017}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f81b2da2b96b5434cf48d9b079aec88c}{%
+           family={胡杏},
+           familyi={胡\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=46aa7307723d092002139d387ca5e362}{%
+           family={齐稚平},
+           familyi={齐\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=4aef7d0667b4caa6cdce5e49583b1353}{%
+           family={何佳},
+           familyi={何\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {中文}%
+      }
+      \strng{namehash}{7a1c6dbed13a600d7dc0595182553dfd}
+      \strng{fullhash}{7a1c6dbed13a600d7dc0595182553dfd}
+      \strng{fullhashraw}{7a1c6dbed13a600d7dc0595182553dfd}
+      \strng{bibnamehash}{7a1c6dbed13a600d7dc0595182553dfd}
+      \strng{authorbibnamehash}{7a1c6dbed13a600d7dc0595182553dfd}
+      \strng{authornamehash}{7a1c6dbed13a600d7dc0595182553dfd}
+      \strng{authorfullhash}{7a1c6dbed13a600d7dc0595182553dfd}
+      \strng{authorfullhashraw}{7a1c6dbed13a600d7dc0595182553dfd}
+      \field{sortinit}{胡}
+      \field{sortinithash}{80b1f3d8630f0eff32e77d1d185df759}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2095-6738}
+      \field{journaltitle}{清华金融评论}
+      \field{number}{09}
+      \field{title}{我国资本市场互联互通的历程、现状与展望}
+      \field{year}{2021}
+      \field{pages}{46\bibrangedash 49+44}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.19409/j.cnki.thf-review.2021.09.011
+      \endverb
+    \endentry
+    \entry{JRYJ201807011}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e5d3007384eab841cb6008b3c41c11c9}{%
+           family={钟凯},
+           familyi={钟\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=0f002a2aa2636cc73691f9e8cb337e06}{%
+           family={孙昌玲},
+           familyi={孙\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=08904620ae04bb12954e1bdca9dd60e8}{%
+           family={王永妍},
+           familyi={王\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=899f403ffbb335ef5f60f4b421c58424}{%
+           family={王化成},
+           familyi={王\bibinitperiod}}}%
+      }
+      \strng{namehash}{7fbe6df0c3dadcab1273af1453c23798}
+      \strng{fullhash}{b275dd39e5dd4338b4557545b9da71ed}
+      \strng{fullhashraw}{b275dd39e5dd4338b4557545b9da71ed}
+      \strng{bibnamehash}{7fbe6df0c3dadcab1273af1453c23798}
+      \strng{authorbibnamehash}{7fbe6df0c3dadcab1273af1453c23798}
+      \strng{authornamehash}{7fbe6df0c3dadcab1273af1453c23798}
+      \strng{authorfullhash}{b275dd39e5dd4338b4557545b9da71ed}
+      \strng{authorfullhashraw}{b275dd39e5dd4338b4557545b9da71ed}
+      \field{sortinit}{钟}
+      \field{sortinithash}{284a09a24eb89e684e75c1b8d66d5063}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1002-7246}
+      \field{journaltitle}{金融研究}
+      \field{number}{07}
+      \field{title}{资本市场对外开放与股价异质性波动——来自“沪港通”的经验证据}
+      \field{year}{2018}
+      \field{pages}{174\bibrangedash 192}
+      \range{pages}{19}
+    \endentry
+    \entry{经管策略}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd6b1c8cd991a5feef4acee1043cc96c}{%
+           family={陈城钰},
+           familyi={陈\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {中文}%
+      }
+      \strng{namehash}{fd6b1c8cd991a5feef4acee1043cc96c}
+      \strng{fullhash}{fd6b1c8cd991a5feef4acee1043cc96c}
+      \strng{fullhashraw}{fd6b1c8cd991a5feef4acee1043cc96c}
+      \strng{bibnamehash}{fd6b1c8cd991a5feef4acee1043cc96c}
+      \strng{authorbibnamehash}{fd6b1c8cd991a5feef4acee1043cc96c}
+      \strng{authornamehash}{fd6b1c8cd991a5feef4acee1043cc96c}
+      \strng{authorfullhash}{fd6b1c8cd991a5feef4acee1043cc96c}
+      \strng{authorfullhashraw}{fd6b1c8cd991a5feef4acee1043cc96c}
+      \field{sortinit}{陈}
+      \field{sortinithash}{f97a30f7cde1492ba692235ae4cf11ee}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{清华大学学位论文}
+      \field{title}{北向因子动态组合量化模型研究}
+      \field{year}{2024}
+    \endentry
+    \entry{YNJR201532099}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=20c9289f0f250638c12d32d76398dd90}{%
+           family={陈晨},
+           familyi={陈\bibinitperiod}}}%
+      }
+      \strng{namehash}{20c9289f0f250638c12d32d76398dd90}
+      \strng{fullhash}{20c9289f0f250638c12d32d76398dd90}
+      \strng{fullhashraw}{20c9289f0f250638c12d32d76398dd90}
+      \strng{bibnamehash}{20c9289f0f250638c12d32d76398dd90}
+      \strng{authorbibnamehash}{20c9289f0f250638c12d32d76398dd90}
+      \strng{authornamehash}{20c9289f0f250638c12d32d76398dd90}
+      \strng{authorfullhash}{20c9289f0f250638c12d32d76398dd90}
+      \strng{authorfullhashraw}{20c9289f0f250638c12d32d76398dd90}
+      \field{sortinit}{陈}
+      \field{sortinithash}{f97a30f7cde1492ba692235ae4cf11ee}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1672-8661}
+      \field{journaltitle}{时代金融}
+      \field{number}{32}
+      \field{title}{沪港通对沪市股票的波动性、流动性影响研究——基于双重差分模型}
+      \field{year}{2015}
+      \field{pages}{146+150}
+      \range{pages}{-1}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

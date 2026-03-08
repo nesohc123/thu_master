@@ -1,0 +1,15 @@
+\contentsline {table}{\numberline {1}{\ignorespaces 数据来源与描述}}{19}{}%
+\contentsline {table}{\numberline {2}{\ignorespaces 修正相关系数常数项回归结果（Newey-West HAC 检验）}}{30}{}%
+\contentsline {table}{\numberline {3}{\ignorespaces 北向资金主动交易收益的选股—择时分解统计}}{33}{}%
+\contentsline {table}{\numberline {4}{\ignorespaces 上海证券交易所各类投资者交易占比与持股占比（年度数据）}}{37}{}%
+\contentsline {table}{\numberline {5}{\ignorespaces 不同预测期限下北向资金净流入与未来回报截面相关系数的 Newey-West 稳健检验}}{43}{}%
+\contentsline {table}{\numberline {6}{\ignorespaces 格兰杰因果检验：北向资金净流入对沪深港通标的股成交额的预测效应}}{48}{}%
+\contentsline {table}{\numberline {7}{\ignorespaces 格兰杰因果检验：沪深港通标的股成交额对北向资金净流入的预测效应}}{49}{}%
+\contentsline {table}{\numberline {8}{\ignorespaces 格兰杰因果检验（$\text {Vol}_1$）：北向资金交易强度对横截面平均波动率的预测效应}}{55}{}%
+\contentsline {table}{\numberline {9}{\ignorespaces 格兰杰因果检验（$\text {Vol}_1$）：横截面平均波动率对北向资金交易强度的预测效应}}{57}{}%
+\contentsline {table}{\numberline {10}{\ignorespaces 格兰杰因果检验（$\text {Vol}_2$）：北向资金交易强度对横截面平均振幅的预测效应}}{57}{}%
+\contentsline {table}{\numberline {11}{\ignorespaces 格兰杰因果检验（$\text {Vol}_2$）：横截面平均振幅对北向资金交易强度的预测效应}}{59}{}%
+\contentsline {table}{\numberline {12}{\ignorespaces 沪港通开通对标的股票波动率的影响：双重差分回归结果（完整样本窗口）}}{66}{}%
+\contentsline {table}{\numberline {13}{\ignorespaces 沪港通开通对标的股票波动率的影响：双重差分回归结果（剔除事件前后各1个月的缩减样本窗口）}}{68}{}%
+\contentsline {table}{\numberline {14}{\ignorespaces 用于预测目标残差化处理的自定义风格因子列表}}{72}{}%
+\contentsline {table}{\numberline {15}{\ignorespaces 模型训练特征变量一览：原始数据字段、运算操作与时间参数}}{75}{}%

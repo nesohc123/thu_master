@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>北向资金因果关系示意图</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      background: #f4f6fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 8px 40px rgba(30, 60, 120, 0.13);
+      padding: 44px 56px 48px 56px;
+      max-width: 820px;
+      width: 100%;
+    }
+
+    .title-block {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .title-block h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a2a4a;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .title-block p {
+      font-size: 13px;
+      color: #6a7fa8;
+      letter-spacing: 1px;
+    }
+
+    svg#diagram {
+      display: block;
+      margin: 0 auto;
+      overflow: visible;
+    }
+
+    /* Legend */
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #3a4a6a;
+    }
+
+    .legend-line {
+      width: 44px;
+      height: 0;
+      border-top-width: 2.5px;
+      border-top-style: solid;
+      position: relative;
+    }
+
+    .legend-line.bidirect {
+      border-color: #27ae60;
+    }
+    .legend-line.bidirect::before,
+    .legend-line.bidirect::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      border: 5px solid transparent;
+    }
+    .legend-line.bidirect::before {
+      left: -2px;
+      border-right-color: #27ae60;
+    }
+    .legend-line.bidirect::after {
+      right: -2px;
+      border-left-color: #27ae60;
+    }
+
+    .legend-line.unidirect {
+      border-color: #e67e22;
+    }
+    .legend-line.unidirect::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      right: -2px;
+      border: 5px solid transparent;
+      border-left-color: #e67e22;
+    }
+
+    .legend-line.no-cause {
+      border-color: #e74c3c;
+      border-top-style: dashed;
+    }
+
+    .legend-cross {
+      font-size: 15px;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 12px;
+      color: #8a9ab8;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+
+  <div class="title-block">
+    <h1>北向资金因果关系示意图</h1>
+    <p>Causal Relationship Diagram of Northbound Capital Flow</p>
+  </div>
+
+  <!--
+    三角形布局：
+    北向资金 (A)  在左上
+    同期回报 (B)  在右上
+    未来回报 (C)  在正下中
+  -->
+  <svg id="diagram" width="660" height="360" viewBox="0 0 660 360">
+    <defs>
+      <!-- 绿色箭头（双向） -->
+      <marker id="arrow-green-end" markerWidth="10" markerHeight="7"
+              refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+      </marker>
+      <marker id="arrow-green-start" markerWidth="10" markerHeight="7"
+              refX="1" refY="3.5" orient="auto-start-reverse">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+      </marker>
+
+      <!-- 橙色箭头（单向） -->
+      <marker id="arrow-orange-end" markerWidth="10" markerHeight="7"
+              refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#e67e22"/>
+      </marker>
+
+      <!-- 节点渐变 -->
+      <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#1a4fa0;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#3a7bd5;stop-opacity:1" />
+      </linearGradient>
+      <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#0d7377;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#14a085;stop-opacity:1" />
+      </linearGradient>
+      <linearGradient id="grad-indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#2c3e7a;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#4e6bbf;stop-opacity:1" />
+      </linearGradient>
+
+      <!-- 阴影 -->
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1a3060" flood-opacity="0.15"/>
+      </filter>
+    </defs>
+
+    <!-- ========== 连线 ========== -->
+
+    <!-- A ↔ B 双向因果（绿色实线） -->
+    <line x1="198" y1="108"
+          x2="462" y2="108"
+          stroke="#27ae60" stroke-width="2.5"
+          marker-start="url(#arrow-green-start)"
+          marker-end="url(#arrow-green-end)"/>
+    <!-- 标签 -->
+    <rect x="267" y="82" width="126" height="24" rx="6" fill="#eafaf1"/>
+    <text x="330" y="98" text-anchor="middle" font-size="12" fill="#1e8449" font-weight="600">
+      双向因果关系
+    </text>
+
+    <!-- B → C 单向因果（橙色实线） -->
+    <!-- B 节点右下角到 C 上方 -->
+    <line x1="510" y1="148"
+          x2="374" y2="266"
+          stroke="#e67e22" stroke-width="2.5"
+          marker-end="url(#arrow-orange-end)"/>
+    <!-- 标签 -->
+    <rect x="448" y="192" width="110" height="24" rx="6" fill="#fef5eb"/>
+    <text x="503" y="208" text-anchor="middle" font-size="12" fill="#c0670a" font-weight="600">
+      单向因果关系
+    </text>
+
+    <!-- A ✗ C 无直接因果（红色虚线） -->
+    <line x1="150" y1="148"
+          x2="286" y2="266"
+          stroke="#e74c3c" stroke-width="2"
+          stroke-dasharray="8,5"/>
+    <!-- × 标记 -->
+    <circle cx="218" cy="207" r="14" fill="#fff" stroke="#e74c3c" stroke-width="1.5"/>
+    <text x="218" y="213" text-anchor="middle" font-size="16" fill="#e74c3c" font-weight="bold">✕</text>
+    <!-- 标签 -->
+    <rect x="62" y="205" width="110" height="24" rx="6" fill="#fdecea"/>
+    <text x="117" y="221" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="600">
+      无直接因果
+    </text>
+
+    <!-- ========== 节点 ========== -->
+
+    <!-- A: 北向资金 （左上） -->
+    <g filter="url(#shadow)">
+      <rect x="30" y="68" width="240" height="80" rx="16" fill="url(#grad-blue)"/>
+    </g>
+    <text x="150" y="101" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" letter-spacing="2">
+      北向资金
+    </text>
+    <text x="150" y="123" text-anchor="middle" font-size="11" fill="#b8d0f8" letter-spacing="0.5">
+      Northbound Capital Flow
+    </text>
+
+    <!-- B: 同期回报 （右上） -->
+    <g filter="url(#shadow)">
+      <rect x="390" y="68" width="240" height="80" rx="16" fill="url(#grad-teal)"/>
+    </g>
+    <text x="510" y="101" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" letter-spacing="2">
+      同期回报
+    </text>
+    <text x="510" y="123" text-anchor="middle" font-size="11" fill="#a8e8e0" letter-spacing="0.5">
+      Contemporaneous Returns
+    </text>
+
+    <!-- C: 未来回报 （下中） -->
+    <g filter="url(#shadow)">
+      <rect x="210" y="266" width="240" height="80" rx="16" fill="url(#grad-indigo)"/>
+    </g>
+    <text x="330" y="299" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" letter-spacing="2">
+      未来回报
+    </text>
+    <text x="330" y="321" text-anchor="middle" font-size="11" fill="#b8c8f8" letter-spacing="0.5">
+      Future Returns
+    </text>
+
+  </svg>
+
+  <!-- 图例 -->
+  <div class="legend">
+    <div class="legend-item">
+      <svg width="50" height="14" style="overflow:visible">
+        <defs>
+          <marker id="l-green-e" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0,8 3,0 6" fill="#27ae60"/>
+          </marker>
+          <marker id="l-green-s" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto-start-reverse">
+            <polygon points="0 0,8 3,0 6" fill="#27ae60"/>
+          </marker>
+        </defs>
+        <line x1="4" y1="7" x2="46" y2="7" stroke="#27ae60" stroke-width="2.2"
+              marker-start="url(#l-green-s)" marker-end="url(#l-green-e)"/>
+      </svg>
+      <span>双向因果关系</span>
+    </div>
+    <div class="legend-item">
+      <svg width="50" height="14" style="overflow:visible">
+        <defs>
+          <marker id="l-orange-e" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0,8 3,0 6" fill="#e67e22"/>
+          </marker>
+        </defs>
+        <line x1="4" y1="7" x2="46" y2="7" stroke="#e67e22" stroke-width="2.2"
+              marker-end="url(#l-orange-e)"/>
+      </svg>
+      <span>单向因果关系</span>
+    </div>
+    <div class="legend-item">
+      <svg width="50" height="14" style="overflow:visible">
+        <line x1="4" y1="7" x2="46" y2="7" stroke="#e74c3c" stroke-width="2"
+              stroke-dasharray="6,4"/>
+      </svg>
+      <span class="legend-cross">✕</span>
+      <span>无直接因果关系</span>
+    </div>
+  </div>
+
+  <div class="note">
+    注：北向资金与同期回报互为因果，同期回报对未来回报存在单向预测能力，<br/>
+    北向资金对未来回报不存在直接因果关系。
+  </div>
+
+</div>
+</body>
+</html>
